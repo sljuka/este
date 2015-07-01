@@ -1,15 +1,4 @@
-<a href="https://este.herokuapp.com/"><img alt="Este.js" src="https://cloud.githubusercontent.com/assets/66249/6515265/b91f0fb8-c388-11e4-857e-c90902e0b7a1.png" width="200"></a>
-
-[![Circle CI](https://circleci.com/gh/steida/este.svg?style=svg)](https://circleci.com/gh/steida/este)
-[![Join the chat at https://gitter.im/steida/este](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/steida/este)
-[![Dependency Status](https://david-dm.org/steida/este.png)](https://david-dm.org/steida/este)
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-> The most complete React/Flux dev stack and starter kit for isomorphic functional web apps. Forget about [evil frameworks](http://tomasp.net/blog/2015/library-frameworks/), learn laser focused libraries and patterns instead.
-
-> __UPDATE__: I'm in San Francisco right now. Feel free to ask for Este.js training or consulting. [Write me](mailto:daniel@steigerwald.cz).
-
-> Forget about PHP/Ruby/Angular/Backbone whatever client or server only framework. Also, we don't need yet another Flux library, vanilla Flux is good enough. This dev stack is web dev panacea, at least for me :-)
+# Este (Blueberry fork)
 
 ## Techniques
 
@@ -39,20 +28,10 @@ Then install [gulp.js](http://gulpjs.com/).
 npm install -g gulp
 ```
 
-#### Windows
-
-Use this if you are using JEST or another library, which has to be compiled.
-
-- Install Python - Install version 2.7 of Python and add it to your path or/and create a PYTHONPATH environment variable.
-- Install Visual Studio (Express Edition is fine) - We will need this for some of modules that are compiled when we are installing Este. [Download VS Express](https://www.visualstudio.com/en-us/products/visual-studio-express-vs.aspx), get one of the versions that has C++ - Express 2013 for Windows Desktop for example.
-- Set Visual Studio Version Flags - We need to tell node-gyp (something that is used for compiling addons) what version of Visual Studio we want to compile with. You can do this either through an environment variable GYP_MSVS_VERSION. If you are using Express, you have to say GYP_MSVS_VERSION=2013e.
-
-Thanks to [Ryanlanciaux](http://ryanlanciaux.github.io/blog/2014/08/02/using-jest-for-testing-react-components-on-windows/)
-
 ## Create App
 
 ```shell
-git clone https://github.com/steida/este.git este-app
+git clone https://github.com/blueberryapps/este.git este-app
 cd este-app
 npm install
 ```
@@ -61,13 +40,14 @@ npm install
 
 - run `gulp`
 - point your browser to [localhost:8000](http://localhost:8000)
-- build something beautiful
 
 ## Dev Tasks
 
 - `gulp` run app in development mode
 - `gulp -p` run app in production mode
 - `gulp test`
+- `gulp fontIcons` generate font icons from SVGs
+- `gulp browserList` generate list of supported browsers
 
 ## CI Tasks
 
@@ -97,19 +77,3 @@ application architecture](https://medium.com/brigade-engineering/what-is-the-flu
 - Even though we can use `import {canUseDOM} from 'react/lib/ExecutionEnvironment'` to detect browser/server, don't do it since it's runtime value. Use webpack DefinePlugin to set `process.env.IS_BROWSER` rather, because compilation removes dead code.
 - How to use Closure Tools, [gist](https://gist.github.com/steida/afbc595a1e2f27e925d9)
 - Recommended editor is [sublimetext](http://www.sublimetext.com/), or [atom.io](https://atom.io) ([tips](https://github.com/steida/atom-io-settings)).
-
-## Training
-- [Czech Republic](http://javascript-skoleni.cz)
-- San Francisco - feel free to [write me](mailto:daniel@steigerwald.cz)
-- [DzejEs.cz](http://www.dzejes.cz) - Czech articles about modern web applications
-
-## Notes
-
-- Este.js dev stack should work on OSX, Linux, and Windows. Feel free to report any issue.
-- As a rule of thumb, Este.js supports all evergreen browsers plus last two pieces of IE.
-
-## Credit
-
-<img alt="Este.js" src="https://cloud.githubusercontent.com/assets/66249/6515278/de638916-c388-11e4-8754-184f5b11e770.jpeg" width="200">
-
-made by Daniel Steigerwald, [twitter.com/steida](https://twitter.com/steida)
